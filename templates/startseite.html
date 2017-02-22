@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Startseite{% endblock title %}
+{% block page_content %}
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="/Nachrichten"><img src="../assets/nachrichtenklein.jpg"></a>
+                <div class="caption">
+                    <h3>Nachrichten</h3>
+                    <p>Hier kannst du mit anderen Google-Usern Mails schreiben!</p>
+                    <p>>>> Klick das Bild!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../assets/bmailklein.gif">
+                <div class="caption">
+                    <h3>Willkommen bei BMail!</h3>
+                    <p>Ich hoffe, du hast viel Spaß beim ausprobieren!</p>
+                    <p>>>> Klick das Bild nicht!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a  href="/Wetter"><img src="../assets/wetterklein.jpg"></a>
+                <div class="caption">
+                    <h3>Wetterseite</h3>
+                    <p>Das Wetter von Vienne in Echtzeit als Buchstaben.</p>
+                    <p>>>> Klick das Bild!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock page_content %}

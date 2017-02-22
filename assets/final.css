@@ -1,0 +1,40 @@
+#alles{
+    font-family: Georgia,serif;
+    margin: 5px;
+}
+
+#navilein{
+    background: #ffffff;
+}
+
+body {
+    background-image: url("../assets/back.jpg");
+    background-size: cover;
+}
+
+#minilogo{
+    width: 30px;
+    margin-top: -5px;
+}
+
+#dividiv{
+    margin: 20px;
+    padding: 20px;
+}
+
+.bilderl{
+    max-height: 300px;
+    margin: 20px;
+    padding: 20px;
+}
+
+#abstand{
+    margin: 0 55px 0 55px;
+}
+
+#wetter{
+    background-image: url("../assets/wetter.jpg");
+    background-size: cover;
+    padding: 20px;
+    margin: 20px;
+}

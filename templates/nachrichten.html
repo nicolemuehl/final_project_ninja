@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Nachrichten{% endblock title %}
+{% block page_content %}
+    <h1 id="abstand">Willkommen bei deinen Nachrichten! Wohin möchtest du?</h1>
+    <div id="dividiv" class="row">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="/Nachricht schreiben"><img class="bilderl" src="../assets/schreiben.jpg"></a>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="/Eingang"><img class="bilderl" src="../assets/eingang.jpg"></a>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a href="/Ausgang"><img class="bilderl" src="../assets/ausgang.jpg"></a>
+            </div>
+        </div>
+    </div>
+{% endblock page_content %}

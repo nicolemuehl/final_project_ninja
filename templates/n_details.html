@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Nachrichtdetails{% endblock title %}
+{% block page_content %}
+    <div class="panel panel-default">
+        <div class="panel-heading"><strong>Betreff: {{ nachricht.betreff }}</strong></div>
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Datum: </strong>{{ nachricht.created.strftime("%d.%m.%Y, %H:%M") }}</li>
+            <li class="list-group-item"><strong>ID: </strong>{{ nachricht.key.id() }}</li>
+            <li class="list-group-item"><strong>Sender: </strong>{{ nachricht.sender }}</li>
+            <li class="list-group-item"><strong>Empfänger: </strong>{{ nachricht.empfaenger }}</li>
+            <li class="list-group-item">{{ nachricht.nachrichttext }}</li>
+            <li class="list-group-item"><a class="btn btn-default navbar-btn" href="/nachricht/{{ nachricht.key.id() }}/loeschen" role="button">Nachricht löschen</a></li>
+        </ul>
+    </div>
+{% endblock page_content %}

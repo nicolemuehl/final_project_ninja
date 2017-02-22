@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Nachricht schreiben{% endblock title %}
+{% block page_content %}
+    {% if logged_in %}
+        <h1>Hallo, {{ user.nickname() }}, schreib deine Nachricht!</h1>
+        <br>
+        <form method="post">
+            <div class="form-group">
+                <label>Sender:</label>
+                {{ user.nickname() }}
+            </div>
+            <div class="form-group">
+                <label>Empfänger:</label>
+                <input type="text" class="form-control" name="empfaenger">
+            </div>
+            <div class="form-group">
+                <label>Betreff:</label>
+                <input type="text" class="form-control" name="betreff">
+            </div>
+            <p><textarea class="form-control" name="nachrichttext" rows="5" placeholder="Was möchtest du schreiben?"></textarea></p>
+            <button type="submit">Abschicken</button>
+        </form>
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            <strong>Um eine Nachricht zu schreiben, musst du eingeloggt sein!</strong>
+            <p><a class="btn btn-default navbar-btn" href="{{ login_url }}" role="button">Anmelden</a></p>
+        </div>
+    {% endif %}
+{% endblock page_content %}

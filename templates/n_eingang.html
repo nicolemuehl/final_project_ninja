@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Posteingang{% endblock title %}
+{% block page_content %}
+    {% if logged_in %}
+        <h1>Posteingang von {{ user.nickname() }}</h1>
+        {% for nachricht in nachrichten %}
+            <div class="panel panel-default">
+                <div class="panel-heading"><a href="/nachricht/{{ nachricht.key.id() }}">Betreff: {{ nachricht.betreff }}</a></div>
+                <div class="panel-body">
+                Von: {{ nachricht.sender }} • Datum: {{ nachricht.created.strftime("%d.%m.%Y, %H:%M")}}
+                </div>
+            </div>
+        {% else %}
+            <p>Du hast keine Nachrichten bekommen, lass dir von jemandem schreiben!</p>
+        {% endfor %}
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            <strong>Um deine Nachrichten zu lesen, musst du eingeloggt sein!</strong>
+            <p><a class="btn btn-default navbar-btn" href="{{ login_url }}" role="button">Anmelden</a></p>
+        </div>
+    {% endif %}
+{% endblock page_content %}

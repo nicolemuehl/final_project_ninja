@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Wetter{% endblock title %}
+{% block page_content %}
+        <div class="jumbotron" id="wetter">
+          <h1>Das Wetter in: {{wetterinfo.name}}</h1>
+          <p>Wetterdetails: {{wetterinfo.weather[0].description}} • Temperatur: {{wetterinfo.main.temp}} °C • Luftdruck: {{wetterinfo.main.pressure}} • Luftfeuchtigkeit: {{wetterinfo.main.humidity}}</p>
+        </div>
+{% endblock page_content %}

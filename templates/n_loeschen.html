@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Entfernen{% endblock title %}
+{% block page_content %}
+    <div class="panel panel-danger">
+        <div class="panel-heading">Nachricht löschen</div>
+        <div class="panel-body">
+            <form method="post">
+                <p>Von {{ nachricht.sender }} an {{nachricht.empfaenger}}:</p>
+                <p>Betreff: {{ nachricht.betreff }}</p>
+                <br>
+                <p>Bist du dir sicher? Wenn sie weg ist, ist sie weg!</p>
+                <button type="submit">Löschen</button>
+            </form>
+        </div>
+    </div>
+{% endblock page_content %}
